@@ -1,6 +1,8 @@
 class TicketsController < ApplicationController
+  before_filter :authenticate_user!, :except => [:index, :show]
   before_filter :find_project
   before_filter :find_ticket, only: [:edit,:update,:show,:destroy] 
+
 
   def new
     @ticket = @project.tickets.build
@@ -24,6 +26,7 @@ class TicketsController < ApplicationController
 
   def create
     @ticket = @project.tickets.build(params[:ticket])
+    @ticket.user = current_user
     if @ticket.save
       flash[:notice] = "Ticket has been created."
       redirect_to [@project, @ticket]
