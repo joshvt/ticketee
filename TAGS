@@ -125,3 +125,125 @@ class Ticket < ActiveRecord::BaseTicket1,0
 
 app/models/user.rb,41
 class User < ActiveRecord::BaseUser1,0
+
+(null),0
+
+app/controllers/admin/base_controller.rb,85
+class Admin::BaseController < ApplicationControllerAdmin1,0
+  def indexindex3,86
+
+app/controllers/admin/users_controller.rb,133
+class Admin::UsersController < Admin::BaseControllerAdmin1,0
+  def indexindex3,54
+  def newnew7,116
+  def createcreate11,154
+
+app/controllers/application_controller.rb,124
+class ApplicationController < ActionController::BaseApplicationController1,0
+  def authorize_admin!authorize_admin!6,88
+
+app/controllers/projects_controller.rb,286
+class ProjectsController < ApplicationControllerProjectsController1,0
+  def indexindex8,309
+  def newnew12,356
+  def createcreate16,400
+  def showshow27,654
+  def editedit30,672
+  def updateupdate33,690
+  def destroydestroy43,940
+  def find_projectfind_project50,1069
+
+app/controllers/tickets_controller.rb,294
+class TicketsController < ApplicationControllerTicketsController1,0
+  def newnew7,212
+  def showshow11,266
+  def editedit14,284
+  def updateupdate17,302
+  def createcreate27,561
+def destroydestroy40,877
+  def find_projectfind_project47,989
+  def find_ticketfind_ticket51,1064
+
+app/helpers/admin/users_helper.rb,36
+module Admin::UsersHelperAdmin1,0
+
+app/helpers/application_helper.rb,123
+module ApplicationHelperApplicationHelper1,0
+  def title(*parts)title2,25
+  def admins_only(&block)admins_only10,164
+
+,41
+module ProjectsHelperProjectsHelper1,0
+
+app/helpers/tickets_helper.rb,39
+module TicketsHelperTicketsHelper1,0
+
+app/models/project.rb,47
+class Project < ActiveRecord::BaseProject1,0
+
+app/models/ticket.rb,45
+class Ticket < ActiveRecord::BaseTicket1,0
+
+app/models/user.rb,41
+class User < ActiveRecord::BaseUser1,0
+
+(null),0
+
+app/controllers/admin/base_controller.rb,85
+class Admin::BaseController < ApplicationControllerAdmin1,0
+  def indexindex3,86
+
+app/controllers/admin/users_controller.rb,133
+class Admin::UsersController < Admin::BaseControllerAdmin1,0
+  def indexindex3,54
+  def newnew7,116
+  def createcreate11,154
+
+app/controllers/application_controller.rb,124
+class ApplicationController < ActionController::BaseApplicationController1,0
+  def authorize_admin!authorize_admin!6,88
+
+app/controllers/projects_controller.rb,286
+class ProjectsController < ApplicationControllerProjectsController1,0
+  def indexindex8,309
+  def newnew12,356
+  def createcreate16,400
+  def showshow27,654
+  def editedit30,672
+  def updateupdate33,690
+  def destroydestroy43,940
+  def find_projectfind_project50,1069
+
+app/controllers/tickets_controller.rb,294
+class TicketsController < ApplicationControllerTicketsController1,0
+  def newnew7,212
+  def showshow11,266
+  def editedit14,284
+  def updateupdate17,302
+  def createcreate27,561
+def destroydestroy40,877
+  def find_projectfind_project47,989
+  def find_ticketfind_ticket51,1064
+
+app/helpers/admin/users_helper.rb,36
+module Admin::UsersHelperAdmin1,0
+
+app/helpers/application_helper.rb,123
+module ApplicationHelperApplicationHelper1,0
+  def title(*parts)title2,25
+  def admins_only(&block)admins_only10,164
+
+,41
+module ProjectsHelperProjectsHelper1,0
+
+app/helpers/tickets_helper.rb,39
+module TicketsHelperTicketsHelper1,0
+
+app/models/project.rb,47
+class Project < ActiveRecord::BaseProject1,0
+
+app/models/ticket.rb,45
+class Ticket < ActiveRecord::BaseTicket1,0
+
+app/models/user.rb,41
+class User < ActiveRecord::BaseUser1,0
