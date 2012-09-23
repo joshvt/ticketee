@@ -19,6 +19,7 @@ feature 'Signing in' do
     fill_in 'Email', :with => "ticketee@example.com"
     fill_in 'Password', :with => "password"
     click_button "Sign in"
+    #page.should have_content("Please confirm your account before signing in.")
     page.should have_content("Signed in successfully.")
   end
 end
