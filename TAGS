@@ -247,3 +247,237 @@ class Ticket < ActiveRecord::BaseTicket1,0
 
 app/models/user.rb,41
 class User < ActiveRecord::BaseUser1,0
+
+(null),0
+
+app/controllers/admin/base_controller.rb,85
+class Admin::BaseController < ApplicationControllerAdmin1,0
+  def indexindex3,86
+
+app/controllers/admin/users_controller.rb,240
+class Admin::UsersController < Admin::BaseControllerAdmin1,0
+  def indexindex4,125
+  def showshow8,187
+  def newnew11,205
+  def createcreate15,243
+  def editedit26,517
+  def updateupdate29,535
+  def find_userfind_user47,976
+
+app/controllers/application_controller.rb,124
+class ApplicationController < ActionController::BaseApplicationController1,0
+  def authorize_admin!authorize_admin!6,88
+
+app/controllers/projects_controller.rb,286
+class ProjectsController < ApplicationControllerProjectsController1,0
+  def indexindex8,309
+  def newnew12,356
+  def createcreate16,400
+  def showshow27,654
+  def editedit30,672
+  def updateupdate33,690
+  def destroydestroy43,940
+  def find_projectfind_project50,1069
+
+app/controllers/tickets_controller.rb,294
+class TicketsController < ApplicationControllerTicketsController1,0
+  def newnew7,212
+  def showshow11,266
+  def editedit14,284
+  def updateupdate17,302
+  def createcreate27,561
+def destroydestroy40,877
+  def find_projectfind_project47,989
+  def find_ticketfind_ticket51,1064
+
+app/helpers/admin/users_helper.rb,36
+module Admin::UsersHelperAdmin1,0
+
+app/helpers/application_helper.rb,123
+module ApplicationHelperApplicationHelper1,0
+  def title(*parts)title2,25
+  def admins_only(&block)admins_only10,164
+
+,41
+module ProjectsHelperProjectsHelper1,0
+
+app/helpers/tickets_helper.rb,39
+module TicketsHelperTicketsHelper1,0
+
+app/models/project.rb,47
+class Project < ActiveRecord::BaseProject1,0
+
+app/models/ticket.rb,45
+class Ticket < ActiveRecord::BaseTicket1,0
+
+app/models/user.rb,64
+class User < ActiveRecord::BaseUser1,0
+  def to_sto_s13,548
+
+,0
+
+spec/controllers/projects_controller_spec.rb,0
+
+spec/controllers/tickets_controller_spec.rb,0
+
+spec/controllers/tickets_controller_spec.rb,0
+
+,0
+
+spec/integration/admin/deleting_users_spec.rb,0
+
+spec/integration/admin/editing_users_spec.rb,0
+
+spec/integration/creating_tickets_spec.rb,0
+
+spec/integration/deleting_projects_spec.rb,0
+
+spec/integration/deleting_tickets_spec.rb,0
+
+spec/integration/editing_projects_spec.rb,0
+
+spec/integration/editing_tickets_spec.rb,0
+
+spec/integration/hidden_links_spec.rb,0
+
+spec/integration/signing_in_spec.rb,0
+
+spec/integration/signing_up_spec.rb,0
+
+spec/integration/viewing_projects_spec.rb,0
+
+spec/integration/viewing_tickets_spec.rb,0
+
+,0
+
+kfsyv4n00000gn/T//tags.Jfxr4S,96
+module AuthenticationHelpersAuthenticationHelpers1,0
+  def sign_in_as!(user)sign_in_as!2,29
+
+spec/support/capybara_helpers.rb,148
+module CapybaraHelpersCapybaraHelpers1,0
+  def assert_no_link_for(text)assert_no_link_for3,24
+  def assert_link_for(text)assert_link_for8,190
+
+spec/support/factories/project_factory.rb,0
+
+spec/support/factories/ticket_factory.rb,0
+
+spec/support/factories/user_factory.rb,0
+
+(null),0
+
+app/controllers/admin/base_controller.rb,85
+class Admin::BaseController < ApplicationControllerAdmin1,0
+  def indexindex3,86
+
+app/controllers/admin/users_controller.rb,240
+class Admin::UsersController < Admin::BaseControllerAdmin1,0
+  def indexindex4,125
+  def showshow8,187
+  def newnew11,205
+  def createcreate15,243
+  def editedit26,517
+  def updateupdate29,535
+  def find_userfind_user47,976
+
+app/controllers/application_controller.rb,124
+class ApplicationController < ActionController::BaseApplicationController1,0
+  def authorize_admin!authorize_admin!6,88
+
+app/controllers/projects_controller.rb,286
+class ProjectsController < ApplicationControllerProjectsController1,0
+  def indexindex8,309
+  def newnew12,356
+  def createcreate16,400
+  def showshow27,654
+  def editedit30,672
+  def updateupdate33,690
+  def destroydestroy43,940
+  def find_projectfind_project50,1069
+
+app/controllers/tickets_controller.rb,294
+class TicketsController < ApplicationControllerTicketsController1,0
+  def newnew7,212
+  def showshow11,266
+  def editedit14,284
+  def updateupdate17,302
+  def createcreate27,561
+def destroydestroy40,877
+  def find_projectfind_project47,989
+  def find_ticketfind_ticket51,1064
+
+app/helpers/admin/users_helper.rb,36
+module Admin::UsersHelperAdmin1,0
+
+app/helpers/application_helper.rb,123
+module ApplicationHelperApplicationHelper1,0
+  def title(*parts)title2,25
+  def admins_only(&block)admins_only10,164
+
+,41
+module ProjectsHelperProjectsHelper1,0
+
+app/helpers/tickets_helper.rb,39
+module TicketsHelperTicketsHelper1,0
+
+app/models/project.rb,47
+class Project < ActiveRecord::BaseProject1,0
+
+app/models/ticket.rb,45
+class Ticket < ActiveRecord::BaseTicket1,0
+
+app/models/user.rb,64
+class User < ActiveRecord::BaseUser1,0
+  def to_sto_s13,548
+
+,0
+
+spec/controllers/projects_controller_spec.rb,0
+
+spec/controllers/tickets_controller_spec.rb,0
+
+spec/controllers/tickets_controller_spec.rb,0
+
+,0
+
+spec/integration/admin/deleting_users_spec.rb,0
+
+spec/integration/admin/editing_users_spec.rb,0
+
+spec/integration/creating_tickets_spec.rb,0
+
+spec/integration/deleting_projects_spec.rb,0
+
+spec/integration/deleting_tickets_spec.rb,0
+
+spec/integration/editing_projects_spec.rb,0
+
+spec/integration/editing_tickets_spec.rb,0
+
+spec/integration/hidden_links_spec.rb,0
+
+spec/integration/signing_in_spec.rb,0
+
+spec/integration/signing_up_spec.rb,0
+
+spec/integration/viewing_projects_spec.rb,0
+
+spec/integration/viewing_tickets_spec.rb,0
+
+,0
+
+kfsyv4n00000gn/T//tags.qitBrz,96
+module AuthenticationHelpersAuthenticationHelpers1,0
+  def sign_in_as!(user)sign_in_as!2,29
+
+spec/support/capybara_helpers.rb,148
+module CapybaraHelpersCapybaraHelpers1,0
+  def assert_no_link_for(text)assert_no_link_for3,24
+  def assert_link_for(text)assert_link_for8,190
+
+spec/support/factories/project_factory.rb,0
+
+spec/support/factories/ticket_factory.rb,0
+
+spec/support/factories/user_factory.rb,0
