@@ -481,3 +481,157 @@ spec/support/factories/project_factory.rb,0
 spec/support/factories/ticket_factory.rb,0
 
 spec/support/factories/user_factory.rb,0
+
+(null),0
+
+app/controllers/admin/base_controller.rb,85
+class Admin::BaseController < ApplicationControllerAdmin1,0
+  def indexindex3,86
+
+app/controllers/admin/users_controller.rb,270
+class Admin::UsersController < Admin::BaseControllerAdmin1,0
+  def indexindex4,125
+  def showshow8,187
+  def newnew11,205
+  def createcreate15,243
+  def editedit26,517
+  def updateupdate29,535
+  def destroydestroy46,968
+  def find_userfind_user59,1198
+
+app/controllers/application_controller.rb,124
+class ApplicationController < ActionController::BaseApplicationController1,0
+  def authorize_admin!authorize_admin!6,88
+
+app/controllers/projects_controller.rb,287
+class ProjectsController < ApplicationControllerProjectsController1,0
+  def indexindex9,371
+  def newnew13,436
+  def createcreate17,480
+  def showshow28,734
+  def editedit31,752
+  def updateupdate34,770
+  def destroydestroy44,1020
+  def find_projectfind_project51,1149
+
+app/controllers/registrations_controller.rb,177
+class RegistrationsController < Devise::RegistrationsControllerRegistrationsController1,0
+  def after_inactive_sign_up_path_for(resource)after_inactive_sign_up_path_for4,75
+
+app/controllers/tickets_controller.rb,437
+class TicketsController < ApplicationControllerTicketsController1,0
+  def newnew11,362
+  def showshow15,416
+  def editedit18,434
+  def updateupdate21,452
+  def createcreate31,711
+def destroydestroy44,1027
+def find_projectfind_project52,1140
+def find_ticketfind_ticket59,1360
+def authorize_create!authorize_create!63,1428
+def authorize_update!authorize_update!70,1623
+def authorize_delete!authorize_delete!77,1814
+
+app/controllers/users_controller.rb,103
+class UsersController < ApplicationControllerUsersController1,0
+  def confirmationconfirmation2,46
+
+app/helpers/admin/users_helper.rb,36
+module Admin::UsersHelperAdmin1,0
+
+app/helpers/application_helper.rb,186
+module ApplicationHelperApplicationHelper1,0
+  def authorized?(permission, thing, &block)authorized?2,25
+  def title(*parts)title7,161
+  def admins_only(&block)admins_only15,300
+
+,41
+module ProjectsHelperProjectsHelper1,0
+
+app/helpers/tickets_helper.rb,39
+module TicketsHelperTicketsHelper1,0
+
+app/helpers/users_helper.rb,35
+module UsersHelperUsersHelper1,0
+
+app/models/ability.rb,65
+class AbilityAbility1,0
+  def initialize(user)initialize4,41
+
+app/models/permission.rb,53
+class Permission < ActiveRecord::BasePermission1,0
+
+app/models/project.rb,126
+class Project < ActiveRecord::BaseProject1,0
+  def self.viewable_by(user)viewable_by8,196
+  def self.for(user)for13,354
+
+app/models/ticket.rb,45
+class Ticket < ActiveRecord::BaseTicket1,0
+
+app/models/user.rb,64
+class User < ActiveRecord::BaseUser1,0
+  def to_sto_s14,572
+
+,0
+
+spec/controllers/projects_controller_spec.rb,0
+
+spec/controllers/tickets_controller_spec.rb,126
+      def cannot_create_tickets!cannot_create_tickets!24,702
+      def cannot_update_tickets!cannot_update_tickets!30,896
+
+spec/controllers/users_controller_spec.rb,0
+
+spec/controllers/users_controller_spec.rb,0
+
+/var/folders/_p/1xfwxq1d2dj9w13bkfsyv4n00000gn/T//tags.c77gsE,0
+
+spec/integration/admin/creating_users_spec.rb,0
+
+spec/integration/admin/deleting_users_spec.rb,0
+
+spec/integration/admin/editing_users_spec.rb,0
+
+spec/integration/creating_tickets_spec.rb,0
+
+spec/integration/deleting_projects_spec.rb,0
+
+spec/integration/deleting_tickets_spec.rb,0
+
+spec/integration/editing_projects_spec.rb,0
+
+spec/integration/editing_tickets_spec.rb,0
+
+spec/integration/hidden_links_spec.rb,0
+
+spec/integration/signing_in_spec.rb,0
+
+spec/integration/signing_up_spec.rb,0
+
+spec/integration/viewing_projects_spec.rb,0
+
+spec/integration/viewing_tickets_spec.rb,0
+
+,0
+
+spec/spec_helper.rb,0
+
+,224
+module AuthenticationHelpersAuthenticationHelpers1,0
+  def sign_in_as!(user)sign_in_as!2,29
+module AuthorizationHelpersAuthorizationHelpers16,342
+  def define_permission!(user, action, thing)define_permission!17,370
+
+spec/support/capybara_helpers.rb,148
+module CapybaraHelpersCapybaraHelpers1,0
+  def assert_no_link_for(text)assert_no_link_for3,24
+  def assert_link_for(text)assert_link_for8,190
+
+spec/support/factories/project_factory.rb,0
+
+spec/support/factories/ticket_factory.rb,0
+
+spec/support/factories/user_factory.rb,0
+
+spec/views/users/confirmation.html.erb_spec.rb,0

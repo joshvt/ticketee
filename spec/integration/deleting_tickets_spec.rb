@@ -24,4 +24,16 @@ feature 'Deleting tickets' do
     page.current_url.should == project_url(project)
   end
 
+
+  scenario "New ticket link is shown to a user with permission" do
+    define_permission!(user, "view", project)
+    define_permission!(user, "create tickets", project)
+    visit project_path(project)
+    assert_link_for "New Ticket"
+  end
+
+  scenario "New ticket link is shown to admins" do
+    visit project_path(project)
+    assert_link_for "New Ticket"
+  end
 end
