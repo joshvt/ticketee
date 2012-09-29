@@ -6,6 +6,10 @@ module AuthenticationHelpers
     click_button 'Sign in'
     page.should have_content("Signed in successfully.")
   end 
+
+  def check_permission_box(permission, object)
+    check "permissions_#{object.id}_#{permission}"
+  end
 end
 
 RSpec.configure do |c|
