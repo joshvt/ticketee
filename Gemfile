@@ -38,6 +38,10 @@ end
 gem 'devise', '2.1.0.rc'
 gem 'cancan', '1.6.7'
 
+# had to use git instead of normal gem install as s3 was givin 404
+gem 'cocaine',  :git => 'git://github.com/thoughtbot/cocaine.git', :branch => 'v0.3' 
+gem 'paperclip', '2.7.0'
+
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
 
