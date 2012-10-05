@@ -1,6 +1,8 @@
 class FilesController < ApplicationController
   before_filter :authenticate_user!
 
+
+
   def show
     asset = Asset.find(params[:id])
     if can?(:view, asset.ticket.project)
@@ -11,4 +13,14 @@ class FilesController < ApplicationController
       redirect_to root_path
     end
   end 
+
+  def new
+    @ticket = Ticket.new
+    asset = @ticket.assets.build
+
+    render :partial => "files/form",
+    :locals => { :number => params[:number].to_i, :asset => asset }
+
+  end
+
 end
