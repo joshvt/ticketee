@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120930145514) do
+ActiveRecord::Schema.define(:version => 20121006043703) do
 
   create_table "assets", :force => true do |t|
     t.string   "asset_file_name"
@@ -21,6 +21,15 @@ ActiveRecord::Schema.define(:version => 20120930145514) do
     t.integer  "ticket_id"
     t.datetime "created_at",         :null => false
     t.datetime "updated_at",         :null => false
+  end
+
+  create_table "comments", :force => true do |t|
+    t.text     "text"
+    t.integer  "user_id"
+    t.integer  "ticket_id"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+    t.integer  "state_id"
   end
 
   create_table "permissions", :force => true do |t|
@@ -39,6 +48,12 @@ ActiveRecord::Schema.define(:version => 20120930145514) do
     t.datetime "updated_at",  :null => false
   end
 
+  create_table "states", :force => true do |t|
+    t.string "name"
+    t.string "color"
+    t.string "background"
+  end
+
   create_table "tickets", :force => true do |t|
     t.string   "title"
     t.string   "description"
@@ -46,9 +61,11 @@ ActiveRecord::Schema.define(:version => 20120930145514) do
     t.datetime "created_at",  :null => false
     t.datetime "updated_at",  :null => false
     t.integer  "user_id"
+    t.integer  "state_id"
   end
 
   add_index "tickets", ["project_id"], :name => "index_tickets_on_project_id"
+  add_index "tickets", ["state_id"], :name => "index_tickets_on_state_id"
   add_index "tickets", ["user_id"], :name => "index_tickets_on_user_id"
 
   create_table "users", :force => true do |t|

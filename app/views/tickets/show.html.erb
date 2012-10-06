@@ -4,6 +4,7 @@
   
 
   <small><span id='author'>Created by <%= @ticket.user.email %></span></small>
+  <%= render @ticket.state if @ticket.state %>
 
   <%= simple_format(@ticket.description) %>
 
@@ -22,6 +23,17 @@
 
     </div>
   <% end %>
+
+  <h3>Comments</h3>
+  <div id='comments'>
+    <% if @ticket.comments.exists? %>
+        <%= render @ticket.comments.select(&:persisted?) %>
+    <% else %>
+        There are no comments for this ticket.
+    <% end %>
+  </div>
+
+  <%= render "comments/form" %>
 
   <% authorized?("edit tickets", @project) do %>
     <%= link_to "Edit Ticket", [:edit, @project, @ticket] %>
