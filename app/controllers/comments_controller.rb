@@ -3,9 +3,7 @@ class CommentsController < ApplicationController
   before_filter :find_ticket
 
   def create
-    if cannot?(:"change states", @ticket.project)
-      params[:comment].delete(:state_id)
-    end
+    sanitize_params!()
 
     @comment = @ticket.comments.build(params[:comment])
     @comment.user = current_user
@@ -17,6 +15,16 @@ class CommentsController < ApplicationController
       @states = State.all
       flash[:alert] = "Comment has not been created."
       render :template => "tickets/show"
+    end
+  end
+
+  def sanitize_params!
+    if cannot?(:"change states", @ticket.project)
+      params[:comment].delete(:state_id)
+    end
+
+    if cannot?(:tag, @ticket.project)
+      params[:comment].delete(:tag_names)
     end
   end
 
