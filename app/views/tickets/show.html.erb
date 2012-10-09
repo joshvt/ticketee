@@ -34,8 +34,8 @@
         There are no comments for this ticket.
     <% end %>
   </div>
-
   <%= render "comments/form" %>
+
 
   <% authorized?("edit tickets", @project) do %>
     <%= link_to "Edit Ticket", [:edit, @project, @ticket] %>
